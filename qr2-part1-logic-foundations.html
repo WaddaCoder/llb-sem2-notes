@@ -163,6 +163,86 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t01-m">
+        <div class="inner-header" onclick="togI('t01-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <p>Every argument, however it's dressed up in prose, reduces to the same skeleton: one or more <strong>premises</strong> offered as support, and a <strong>conclusion</strong> they're meant to establish.</p>
+          <div class="notation">
+            <span class="hl">Standard form:</span><br>
+            P1: [premise]<br>
+            P2: [premise]<br>
+            ∴ C: [conclusion]<br><br>
+            <span class="hl">Premise indicators:</span> since, because, given that, as, for<br>
+            <span class="hl">Conclusion indicators:</span> therefore, thus, hence, so, it follows that, consequently
+          </div>
+          <p>Spotting these indicator words is the first mechanical skill in logic, and the one most word problems lean on to hide their structure — a sentence with no "therefore" in it can still be an argument; the conclusion just has to be located by meaning rather than by signal word.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t01-ex">
+        <div class="inner-header" onclick="togI('t01-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Extracting Standard Form</div>
+            <p>"Since the contract was signed under duress, and contracts signed under duress are voidable, this contract is voidable."</p>
+            <div class="notation">
+              P1: The contract was signed under duress.<br>
+              P2: Contracts signed under duress are voidable.<br>
+              ∴ C: This contract is voidable.
+            </div>
+            <p>Notice "since" flags the premises, and the conclusion is stated last but isn't marked with a conclusion-indicator word at all — it has to be identified as the claim the rest of the sentence is built to support, not located by a keyword.</p>
+          </div>
+        </div>
+      </div>
+      <div class="inner-section" id="t01-q">
+        <div class="inner-header" onclick="togI('t01-q')">
+          <span class="inner-label">Practice Questions</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="question-block" id="q01a">
+            <div class="q-header" onclick="togQ('q01a')">
+              <span class="tier-badge t2-badge">T2 · A</span>
+              <span class="q-text">"The notice was not served within the statutory period, and notices not served within the statutory period are invalid, so this notice is invalid." Identify the premises and conclusion, and write the argument in standard form.</span>
+              <svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="q-body">
+              <p>P1: The notice was not served within the statutory period.<br>P2: Notices not served within the statutory period are invalid.<br>∴ C: This notice is invalid.</p>
+              <div class="what-tests">Extracting standard form from a continuous sentence with no explicit premise/conclusion indicator words</div>
+            </div>
+          </div>
+          <div class="question-block" id="q01b">
+            <div class="q-header" onclick="togQ('q01b')">
+              <span class="tier-badge t2-badge">T2 · B</span>
+              <span class="q-text">A witness statement reads: "I saw the defendant leave the building at 9 PM. The crime occurred at 9:15 PM, three streets away. He cannot have committed it." Is this presented as an argument? If so, identify its structure.</span>
+              <svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="q-body">
+              <p><strong>Yes, this is an argument</strong> even though it has no premise/conclusion indicator words at all — "since," "therefore," and similar markers are entirely absent.</p>
+              <p>P1: The defendant left the building at 9 PM.<br>P2: The crime occurred at 9:15 PM, three streets away.<br>∴ C: He cannot have committed it.</p>
+              <p>The conclusion has to be located by meaning — it's the claim the other two sentences are clearly offered to support — not by a signal word, which is exactly the skill this topic exists to build.</p>
+              <div class="what-tests">Identifying an unmarked argument · standard form extraction without indicator words</div>
+            </div>
+          </div>
+          <div class="question-block" id="q01c">
+            <div class="q-header" onclick="togQ('q01c')">
+              <span class="tier-badge t3-badge">T3 · A</span>
+              <span class="q-text">A regulator's press release states: "Inspections increased 40% this year. Compliance complaints fell 25%. Our enforcement program is working." Restate this as a formal argument in standard form, and then evaluate — using only the structure, not outside knowledge — whether the conclusion actually follows from the premises as given.</span>
+              <svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="q-body">
+              <p>P1: Inspections increased 40% this year.<br>P2: Compliance complaints fell 25%.<br>∴ C: The enforcement program is working.</p>
+              <p><strong>Does the conclusion follow?</strong> Not from these premises alone. The two premises are both true claims about what happened, but neither one, nor both together, logically establishes that the enforcement program <em>caused</em> the improvement — an unstated assumption (that the two trends are causally linked, and that no other factor explains the drop in complaints) is doing all the actual work. The argument as stated commits exactly the gap this entire subject is built to catch: premises that are merely <em>related</em> to the conclusion being treated as premises that <em>establish</em> it.</p>
+              <div class="what-tests">Standard form extraction · distinguishing a valid logical structure from a merely plausible-sounding one · the premise-relevance gap that recurs across every later fallacy and causation topic</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="inner-section" id="t01-bar">
         <div class="inner-header" onclick="togI('t01-bar')">
           <span class="inner-label">Bar &amp; LSAT Lens</span>
@@ -216,6 +296,20 @@
               <tr><td><strong>Abductive</strong></td><td>Observation → Explanation</td><td>Best guess</td><td>Circumstantial evidence arguments</td></tr>
             </tbody>
           </table>
+        </div>
+      </div>
+      <div class="inner-section" id="t02-ex">
+        <div class="inner-header" onclick="togI('t02-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Classifying Three Arguments</div>
+            <p><strong>(a)</strong> "Every contract requires offer, acceptance, and consideration. This agreement has all three. Therefore it is a valid contract." — <strong>Deductive.</strong> The conclusion is guaranteed if both premises are true; nothing about contract law is left to probability here.</p>
+            <p><strong>(b)</strong> "The last six judgments from this bench have favoured the plaintiff in negligence claims. The seventh case is likely to favour the plaintiff too." — <strong>Inductive.</strong> A pattern from six specific cases is used to predict a seventh; the conclusion is probable, not certain — a sufficiently different seventh case could break the pattern.</p>
+            <p><strong>(c)</strong> "The safe was found open, the cash missing, and only the manager had the combination. The manager is the most likely suspect." — <strong>Abductive.</strong> This is the simplest explanation for the observations, not the only logically possible one — someone else could have obtained the combination, but absent further evidence, the manager is the best available explanation.</p>
+          </div>
         </div>
       </div>
       <div class="inner-section" id="t02-q">
@@ -330,6 +424,21 @@
           <p style="font-size:13px;color:var(--ink-soft);margin-top:8px;">The bold F on row 2 is the only row where p→q fails. Memorise this row.</p>
         </div>
       </div>
+      <div class="inner-section" id="t03-ex">
+        <div class="inner-header" onclick="togI('t03-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Translating Compound Statements</div>
+            <p>"The defendant is liable if and only if both negligence is proven and the harm was foreseeable."</p>
+            <p>Let p = negligence is proven, q = harm was foreseeable, r = defendant is liable.</p>
+            <div class="notation">r ↔ (p ∧ q)</div>
+            <p>Reading it back into English to check the translation: "r if and only if (p and q)" — liability holds exactly when both negligence and foreseeability hold together, and fails if either is missing. This matches the original sentence, confirming the translation is correct in both directions, which is the actual test of a correct symbolisation — not just going English-to-symbols, but symbols-to-English landing back on the same meaning.</p>
+          </div>
+        </div>
+      </div>
       <div class="inner-section" id="t03-q">
         <div class="inner-header" onclick="togI('t03-q')">
           <span class="inner-label">Practice Questions</span>
@@ -428,6 +537,43 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t04-m">
+        <div class="inner-header" onclick="togI('t04-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <p>To prove two statements equivalent, build a truth table for each and compare column-by-column across all rows — equivalence means every row matches, with no exceptions.</p>
+          <div class="notation">
+            <span class="hl">Procedure:</span><br>
+            1. List all variables, build all 2ⁿ truth-value combinations<br>
+            2. Evaluate each statement's truth value row by row<br>
+            3. Compare the final columns — identical in every row = equivalent (≡); differ in even one row = not equivalent
+          </div>
+          <p>For two variables (p, q), that's 4 rows. For three variables, 8 rows. The number of rows is always 2ⁿ, where n is the number of distinct propositional variables — this is itself a fact PU has tested directly ("how many rows in the truth table for a statement with 4 variables?").</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t04-ex">
+        <div class="inner-header" onclick="togI('t04-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Proving De Morgan 1 by Truth Table</div>
+            <table class="logic-table">
+              <thead><tr><th>p</th><th>q</th><th>p∧q</th><th>¬(p∧q)</th><th>¬p</th><th>¬q</th><th>¬p∨¬q</th></tr></thead>
+              <tbody>
+                <tr><td>T</td><td>T</td><td>T</td><td>F</td><td>F</td><td>F</td><td>F</td></tr>
+                <tr><td>T</td><td>F</td><td>F</td><td>T</td><td>F</td><td>T</td><td>T</td></tr>
+                <tr><td>F</td><td>T</td><td>F</td><td>T</td><td>T</td><td>F</td><td>T</td></tr>
+                <tr><td>F</td><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td></tr>
+              </tbody>
+            </table>
+            <p>Compare the ¬(p∧q) column against the ¬p∨¬q column: F,T,T,T in both, every single row. The two statements are equivalent — this table <em>is</em> the proof, not just an illustration of it.</p>
+          </div>
+        </div>
+      </div>
       <div class="inner-section" id="t04-q">
         <div class="inner-header" onclick="togI('t04-q')">
           <span class="inner-label">Practice Questions</span>
@@ -470,6 +616,19 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t04-bar">
+        <div class="inner-header" onclick="togI('t04-bar')">
+          <span class="inner-label">Bar &amp; LSAT Lens</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="bar-lens">
+            <div class="bar-label">NY Bar · LSAT Connection</div>
+            <p>The contrapositive/converse confusion is, by a wide margin, the single most exploited structural error on the LSAT's Logical Reasoning and Logic Games sections — entire "Necessary Assumption" and "Flaw" question types are built around an answer choice that swaps a conditional for its converse and hopes you won't notice.</p>
+            <p>In statutory interpretation specifically, this distinction has real teeth: a statute reading "if negligence, then liability" does not logically yield "if no negligence, then no liability" — that's the inverse, not the contrapositive, and arguing otherwise without an explicit biconditional in the statutory text is a drafting argument, not a logical entailment. A lawyer who conflates these can lose an argument that was never actually supported by the statute's plain conditional structure.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -504,6 +663,35 @@
           <div class="pattern-warn">
             <div class="pw-label">PU Pattern — Name AND Explain</div>
             <p>PU will not just ask you to name a fallacy. It will present an argument and ask you to identify the flaw AND explain why it is a flaw. Naming alone scores partial marks. The explanation is where full marks live.</p>
+          </div>
+        </div>
+      </div>
+      <div class="inner-section" id="t05-m">
+        <div class="inner-header" onclick="togI('t05-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <p>Fallacies split into two structurally different categories, and naming which category you're in is itself half the answer on a PU question.</p>
+          <div class="notation">
+            <span class="hl">Formal fallacies:</span> the structure itself is broken — affirming the consequent, denying the antecedent. These can be shown invalid with a truth table alone, with no need to know what p and q actually mean.<br><br>
+            <span class="hl">Informal fallacies:</span> the structure is fine — ad hominem, straw man, post hoc, circular reasoning all have a valid-looking shape — but the content is flawed: an irrelevant premise, a misrepresented claim, an unjustified causal leap.
+          </div>
+          <p>In formal fallacies, the logical plumbing itself is broken. In informal fallacies, the plumbing works fine, but what's flowing through it is the problem. That distinction tells you where to locate the flaw: in the symbolic structure, or in the real-world content the structure carries.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t05-ex">
+        <div class="inner-header" onclick="togI('t05-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Diagnosing a Fallacy, Fully</div>
+            <p>"Counsel's argument on environmental liability can't be trusted — their firm has previously represented oil companies."</p>
+            <p><strong>Step 1 — name it:</strong> Ad Hominem.</p>
+            <p><strong>Step 2 — locate the category:</strong> Informal. The sentence has a perfectly normal argument shape ("X is unreliable because of Y"); nothing about its symbolic structure is broken.</p>
+            <p><strong>Step 3 — explain the flaw (where full marks live):</strong> the firm's past clients are irrelevant to whether the legal argument itself is structurally sound. The objection attacks who is speaking instead of engaging with the statutory analysis presented — even a lawyer with a conflicted client history can construct a logically valid argument, and even a lawyer with a spotless history can construct a flawed one. Past representation says nothing about present argument quality.</p>
           </div>
         </div>
       </div>
@@ -603,6 +791,36 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t06-m">
+        <div class="inner-header" onclick="togI('t06-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="notation">
+            <span class="hl">A ⊂ B:</span> A is a subset of B — "All A are B" — every member of A is also in B<br>
+            <span class="hl">A ∩ B = ∅:</span> A and B are disjoint — "No A are B" — zero overlap<br>
+            <span class="hl">A ∩ B ≠ ∅:</span> A and B overlap — "Some A are B" — at least one shared member<br>
+            <span class="hl">Transitivity:</span> if A ⊂ B and B ⊂ C, then A ⊂ C — chains of "all" statements combine
+          </div>
+          <p><strong>Validity test procedure:</strong> draw every premise as accurately as the diagram allows — if a premise uses "some," draw only a partial, ambiguous overlap, not a full circle relationship, since "some" never licenses you to draw more certainty than the premise actually states. Then check: is the conclusion <em>forced</em> by every way the diagram could legally be drawn, or only true in <em>one possible</em> drawing? If only one possible drawing makes it true, the argument is invalid — a valid conclusion must hold in every diagram consistent with the premises, not just the first one you happen to draw.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t06-ex">
+        <div class="inner-header" onclick="togI('t06-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Testing a Three-Circle Syllogism</div>
+            <p>Premise 1: All witnesses are required to take an oath. Premise 2: Some witnesses are minors. Conclusion offered: Some minors are required to take an oath.</p>
+            <p><strong>Drawing it:</strong> Witnesses ⊂ Required-to-Oath (P1, full containment). Minors overlaps Witnesses partially (P2, "some").</p>
+            <p><strong>Checking the conclusion:</strong> the overlap region between Minors and Witnesses sits entirely inside Required-to-Oath, because all of Witnesses does. So that overlap region — which represents witnesses who are minors — is necessarily inside Required-to-Oath too.</p>
+            <p><strong>Valid.</strong> Every way you could legally draw this diagram consistent with both premises forces some minors into the Required-to-Oath circle — there's no valid drawing that avoids it.</p>
+          </div>
+        </div>
+      </div>
       <div class="inner-section" id="t06-q">
         <div class="inner-header" onclick="togI('t06-q')">
           <span class="inner-label">Practice Questions</span>
@@ -655,6 +873,19 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t06-bar">
+        <div class="inner-header" onclick="togI('t06-bar')">
+          <span class="inner-label">Bar &amp; LSAT Lens</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="bar-lens">
+            <div class="bar-label">NY Bar · LSAT Connection</div>
+            <p>LSAT Logic Games are, structurally, Venn-diagram validity testing wearing a different costume — grouping games in particular ask exactly the question this topic trains: given these constraints, what must be true in every possible arrangement, versus what's only true in one arrangement you happened to draw first?</p>
+            <p>In statutory drafting and interpretation, categorical relationships (every contractor is liable / no exempted entity is liable / some employees are contractors) are exactly what Venn reasoning formalises — a lawyer who can quickly diagram a statute's defined categories can spot gaps and overlaps a plain reading misses, particularly in multi-definition regulatory schemes.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -681,6 +912,35 @@
             R(Company, Employee) = true or false depending on the specific pair
           </div>
           <p>Predicate logic is more powerful than propositional logic because it can express <em>who</em> or <em>what</em> a claim applies to — not just whether a compound statement is true or false.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t07-m">
+        <div class="inner-header" onclick="togI('t07-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="notation">
+            <span class="hl">Unary predicate:</span> P(x) — one subject, one property: "x is licensed"<br>
+            <span class="hl">Binary predicate:</span> R(x, y) — a relationship between two subjects: "x employs y"<br>
+            <span class="hl">Compound predicates:</span> built from connectives, e.g. H(x) ∧ ¬G(x) — "x was harmed and x did not consent"<br>
+            <span class="hl">Domain:</span> the set of things x is allowed to range over — always state it, since a predicate's truth depends on which domain you're evaluating it against
+          </div>
+          <p>The mechanical skill here is plugging a specific individual into a predicate and evaluating true/false, then carrying that result through whatever propositional logic (∧, →, etc.) wraps around it — exactly the same truth-table machinery from Topic 3 and 4, just applied to predicates that have first been evaluated for a named subject.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t07-ex">
+        <div class="inner-header" onclick="togI('t07-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Evaluating a Binary Predicate</div>
+            <p>Let R(x, y) = "x is the employer of y." A workplace policy states: "If x is the employer of y, x must provide y with a written contract." Formally: ∀x∀y, R(x,y) → C(x,y), where C(x,y) = "x provides y a written contract."</p>
+            <p>Company Z employs Person D. Apply the rule: R(Z, D) = T (given). By modus ponens on the universal rule, C(Z, D) must be T — Company Z is required to provide Person D a written contract.</p>
+            <p>Notice the rule says nothing about Company Z's obligations to anyone it does <em>not</em> employ — R(Z, anyone-else) = F leaves the conditional vacuously true, with no obligation triggered, exactly the same "false antecedent" pattern from Topic 3's conditional, just now carrying two subjects instead of one proposition.</p>
+          </div>
         </div>
       </div>
       <div class="inner-section" id="t07-q">
@@ -728,6 +988,19 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t07-bar">
+        <div class="inner-header" onclick="togI('t07-bar')">
+          <span class="inner-label">Bar &amp; LSAT Lens</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="bar-lens">
+            <div class="bar-label">NY Bar · Statutory Drafting Connection</div>
+            <p>Multi-element statutes are predicate logic in legislative disguise — most causes of action are literally a conjunction of predicates (duty, breach, causation, damages all required together), and a lawyer's entire job in pleading or defending a claim is checking whether each predicate is satisfied for a specific named party, exactly the mechanical evaluation drilled here.</p>
+            <p>This is also the precise skill MBE and MPT fact patterns test under time pressure: a multi-element rule plus a fact pattern naming several people, where the task is running each person through every element and reporting which conjunction holds.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -753,6 +1026,36 @@
             "Some lawyers are also politicians"
           </div>
           <p>The domain matters enormously. ∀x P(x) over the domain "licensed lawyers in Pakistan" is a very different claim from ∀x P(x) over "all persons."</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t08-m">
+        <div class="inner-header" onclick="togI('t08-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="notation">
+            <span class="hl">Proving ∀x P(x):</span> requires showing P holds for every single element of the domain — one missing case disproves it<br>
+            <span class="hl">Proving ∃x P(x):</span> requires exhibiting just one element where P holds — a single example suffices<br>
+            <span class="hl">Disproving ∀x P(x):</span> requires only one counterexample — find one x where P(x) is false<br>
+            <span class="hl">Disproving ∃x P(x):</span> requires showing P fails for every element — the same heavy burden as proving a ∀
+          </div>
+          <p>This is the single most exploitable structural fact in the whole topic: ∀ and ∃ have <em>opposite</em> burdens depending on whether you're proving or disproving them. A universal claim is hard to prove, easy to disprove. An existential claim is easy to prove, hard to disprove. Whoever frames the question as ∀ versus ∃ is quietly setting how much work the other side has to do.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t08-ex">
+        <div class="inner-header" onclick="togI('t08-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Choosing the Right Quantifier Strategically</div>
+            <p>A regulator wants to claim "every factory in the district complies with the emissions standard" (∀x C(x)). The factory owners' association wants to claim "some factory inspections were conducted unfairly" (∃x U(x)).</p>
+            <p><strong>Regulator's burden:</strong> must demonstrate compliance for every single factory — a complete domain sweep. Missing even one unchecked factory leaves the ∀ claim unproven.</p>
+            <p><strong>Association's burden:</strong> only needs one documented case of an unfair inspection — a single ∃ instantiation closes their argument.</p>
+            <p>Notice the regulator chose the harder claim to make (∀) because it's the stronger, more useful one if true; the association chose the easier claim to make (∃) because it's all they need to create doubt. Recognising which side is making which type of claim — before evaluating whether they've actually met their burden — is the entire skill this topic trains.</p>
+          </div>
         </div>
       </div>
       <div class="inner-section" id="t08-q">
@@ -860,6 +1163,37 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t09-m">
+        <div class="inner-header" onclick="togI('t09-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="notation">
+            <span class="hl">Negation procedure, step by step:</span><br>
+            1. Identify the quantifier (∀ or ∃) and the predicate it governs<br>
+            2. Flip the quantifier (∀↔∃)<br>
+            3. Negate the predicate (P becomes ¬P)<br>
+            4. Nothing else changes — the domain stays the same
+          </div>
+          <p>The two rules are mirror images of each other, which is exactly why they're easy to mix up under time pressure: ¬∀ becomes ∃¬, and ¬∃ becomes ∀¬. Say the rule out loud as "the quantifier flips, the predicate negates" rather than memorising the symbols in isolation — that phrasing survives translation back into English, which is where PU actually tests this.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t09-ex">
+        <div class="inner-header" onclick="togI('t09-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Negating in Both Directions</div>
+            <p>"At least one clause in this agreement is unenforceable." Formally: ∃x, C(x) ∧ U(x), where C(x) = "x is a clause in this agreement," U(x) = "x is unenforceable."</p>
+            <p><strong>Applying the procedure:</strong> flip ∃ to ∀, negate the predicate (U becomes ¬U).</p>
+            <div class="notation">Negation: ∀x, C(x) → ¬U(x) — every clause in this agreement is enforceable</div>
+            <p><strong>Reading it back into English</strong> to verify: "for every clause in this agreement, that clause is enforceable" — which is exactly the opposite claim of "at least one is unenforceable," confirming the negation is correct in both directions, not just symbolically derived.</p>
+          </div>
+        </div>
+      </div>
       <div class="inner-section" id="t09-q">
         <div class="inner-header" onclick="togI('t09-q')">
           <span class="inner-label">Practice Questions</span>
@@ -915,6 +1249,19 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t09-bar">
+        <div class="inner-header" onclick="togI('t09-bar')">
+          <span class="inner-label">Bar &amp; LSAT Lens</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="bar-lens">
+            <div class="bar-label">NY Bar · LSAT Connection</div>
+            <p>The flip-and-negate rule is precisely what the LSAT calls a "Necessary Assumption" or "Weaken" question is built on when the stimulus contains a quantified claim — the correct attack almost always negates the quantifier and the predicate together, not just one of the two, and answer choices that negate only the predicate (a common trap) leave the original quantifier's structure intact and therefore don't actually refute the claim.</p>
+            <p>In drafting, this matters directly: a clause negotiator who is asked to weaken "all disclosures must be made within 30 days" into something more favourable needs to know precisely what the negation is — "at least one disclosure need not be made within 30 days" — rather than overcorrecting into "no disclosures are required," which concedes far more than necessary.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -942,6 +1289,42 @@
           <div class="pattern-warn">
             <div class="pw-label">The Most Common Error</div>
             <p>Students negate Q but forget to flip the quantifier and replace the arrow. Three things change. Every time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="inner-section" id="t10-m">
+        <div class="inner-header" onclick="togI('t10-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="notation">
+            <span class="hl">Checklist for negating ∀x, P(x) → Q(x):</span><br>
+            ☐ Quantifier changed from ∀ to ∃<br>
+            ☐ Arrow (→) changed to conjunction (∧)<br>
+            ☐ Consequent changed from Q to ¬Q<br>
+            ☐ Antecedent P stays unchanged, unnegated
+          </div>
+          <p>Notice the antecedent P does <em>not</em> get negated — only the consequent does. This is the easiest piece to get backwards, because the instinct is to negate "everything," but the correct negation keeps P exactly as it was and asserts it actually held while Q failed to follow. That's what makes it a genuine counterexample to the original rule rather than a different rule entirely.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t10-ex">
+        <div class="inner-header" onclick="togI('t10-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Running the Checklist</div>
+            <p>"Whenever an employee works overtime, they are entitled to additional pay." Formally: ∀x, O(x) → E(x).</p>
+            <div class="notation">
+              ∀ → ∃ ✓<br>
+              → becomes ∧ ✓<br>
+              E(x) becomes ¬E(x) ✓<br>
+              O(x) stays O(x), unnegated ✓<br><br>
+              Negation: ∃x, O(x) ∧ ¬E(x)
+            </div>
+            <p>In plain English: "there exists at least one employee who worked overtime and was not entitled to additional pay." To disprove the original rule, you need exactly one such employee — someone who genuinely worked overtime (the antecedent held) but received no additional pay (the consequent failed). An employee who simply wasn't entitled to overtime pay because they never worked overtime at all doesn't count — that's a case where the antecedent never triggered, which says nothing about whether the rule itself is true.</p>
           </div>
         </div>
       </div>
@@ -1053,6 +1436,45 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t11-m">
+        <div class="inner-header" onclick="togI('t11-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <p><strong>Validity-testing procedure, when an argument doesn't obviously match one of the six named patterns:</strong></p>
+          <div class="notation">
+            1. Symbolise every premise and the conclusion<br>
+            2. Build a truth table covering all variables<br>
+            3. Find every row where ALL premises are true<br>
+            4. Check the conclusion in those rows — if it's true in every one, the argument is valid; if false in even one, invalid
+          </div>
+          <p>The six named patterns are shortcuts that skip this full procedure because their validity (or invalidity) has already been proven once and for all by exactly this method — recognising the pattern lets you skip straight to the answer. When an argument doesn't match a named pattern, the truth-table procedure is the fallback that always works, just slower.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t11-ex">
+        <div class="inner-header" onclick="togI('t11-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Validity Testing an Unnamed Pattern</div>
+            <p>"If the application is complete (p), it will be processed (q). The application was not processed (¬q). The application was incomplete (¬p)." — does ¬q, p→q ∴ ¬p hold?</p>
+            <p>This is Modus Tollens (p→q, ¬q ∴ ¬p) — recognise the named pattern first, which confirms validity instantly. But to verify by table for practice:</p>
+            <table class="logic-table">
+              <thead><tr><th>p</th><th>q</th><th>p→q</th><th>¬q</th><th>¬p</th></tr></thead>
+              <tbody>
+                <tr><td>T</td><td>T</td><td>T</td><td>F</td><td>F</td></tr>
+                <tr><td>T</td><td>F</td><td>F</td><td>T</td><td>F</td></tr>
+                <tr><td>F</td><td>T</td><td>T</td><td>F</td><td>T</td></tr>
+                <tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td></tr>
+              </tbody>
+            </table>
+            <p>Premises true (p→q = T AND ¬q = T) only in row 4. In that row, ¬p = T. The conclusion is true in every row where both premises hold — only one such row exists here, and it confirms the conclusion. Valid.</p>
+          </div>
+        </div>
+      </div>
       <div class="inner-section" id="t11-q">
         <div class="inner-header" onclick="togI('t11-q')">
           <span class="inner-label">Practice Questions</span>
@@ -1116,6 +1538,19 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t11-bar">
+        <div class="inner-header" onclick="togI('t11-bar')">
+          <span class="inner-label">Bar &amp; LSAT Lens</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="bar-lens">
+            <div class="bar-label">NY Bar · LSAT Connection</div>
+            <p>The six named inference patterns are the entire grammar of LSAT Logical Reasoning's "Flaw" question type — every wrong answer choice in a Flaw question is one of Affirming the Consequent or Denying the Antecedent dressed in different content, and recognising the pattern instantly is faster than re-deriving validity from a truth table under exam time pressure.</p>
+            <p>Multi-step statutory chains (p→q, q→r) are exactly how appellate arguments are built — a successful appeal often targets one broken link in a chain of conditionals rather than disputing the whole rule, which is precisely the "where does the chain break" analysis this topic trains.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1140,6 +1575,43 @@
             <span class="hl">Contingency:</span>    p → q          — depends on p and q
           </div>
           <p>The practical importance: legal rules stated as tautologies are empty — they carry no information. Rules stated as contradictions are impossible to satisfy. Well-drafted rules are contingencies — they create real conditions that may or may not be satisfied.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t12-m">
+        <div class="inner-header" onclick="togI('t12-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="notation">
+            <span class="hl">Classification procedure:</span><br>
+            1. Build the full truth table for the compound statement<br>
+            2. Read the final column<br>
+            All T → tautology &nbsp;·&nbsp; All F → contradiction &nbsp;·&nbsp; Mix of T and F → contingency
+          </div>
+          <p>This is the same truth-table machinery from Topic 4, applied with a different goal — there you compared two columns for equivalence, here you're checking whether a single column is uniform or mixed. Any compound statement, however complex, reduces to one of exactly three categories once its full table is built; there's no fourth option.</p>
+        </div>
+      </div>
+      <div class="inner-section" id="t12-ex">
+        <div class="inner-header" onclick="togI('t12-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Classifying a Compound Statement by Table</div>
+            <p>Classify: (p → q) ∨ (q → p)</p>
+            <table class="logic-table">
+              <thead><tr><th>p</th><th>q</th><th>p→q</th><th>q→p</th><th>(p→q)∨(q→p)</th></tr></thead>
+              <tbody>
+                <tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr>
+                <tr><td>T</td><td>F</td><td>F</td><td>T</td><td>T</td></tr>
+                <tr><td>F</td><td>T</td><td>T</td><td>F</td><td>T</td></tr>
+                <tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td></tr>
+              </tbody>
+            </table>
+            <p>The final column is T in every row. <strong>Tautology.</strong> Notice this isn't obvious from looking at the statement alone — "p implies q, or q implies p" sounds like a substantive claim, but at least one direction of implication holds between any two propositions no matter what truth values they take, which is exactly why the table, not intuition, is the reliable test.</p>
+          </div>
         </div>
       </div>
       <div class="inner-section" id="t12-q">
@@ -1185,6 +1657,19 @@
           </div>
         </div>
       </div>
+      <div class="inner-section" id="t12-bar">
+        <div class="inner-header" onclick="togI('t12-bar')">
+          <span class="inner-label">Bar &amp; LSAT Lens</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="bar-lens">
+            <div class="bar-label">NY Bar · Drafting Connection</div>
+            <p>Tautological and contradictory clauses are a real, recurring drafting defect, not just a textbook curiosity — boilerplate language assembled from multiple templates without careful review regularly produces accidental tautologies (conditions that are always satisfied, making a supposed limitation meaningless) and accidental contradictions (exemptions that can never be triggered). Spotting these on a contract or statute review is a direct, billable application of this exact classification skill.</p>
+            <p>On the LSAT, a stimulus that contains a hidden tautology dressed as a substantive premise is a common "Flaw" pattern — the argument seems to rest on real information, but the premise is true no matter what, contributing nothing to the argument's actual support.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1210,6 +1695,35 @@
             3. Identify the logical form — what inference pattern connects them?<br>
             4. Test validity — if premises true, must conclusion follow?<br>
                If not: name the flaw.
+          </div>
+        </div>
+      </div>
+      <div class="inner-section" id="t13-m">
+        <div class="inner-header" onclick="togI('t13-m')">
+          <span class="inner-label">Mechanics &amp; Notation</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <p>Integrated arguments are rarely a single named pattern — they're usually a <strong>chain</strong> of two or three patterns stacked together, sometimes with an unstated premise holding the chain together.</p>
+          <div class="notation">
+            <span class="hl">Finding an implicit premise:</span> if the stated premises don't logically reach the conclusion on their own, ask what additional statement, if assumed true, would close the gap. That missing statement is the implicit premise — and in legal argument, it's usually the most contestable part of the whole structure, precisely because it was never said out loud.<br><br>
+            <span class="hl">Finding the weakest link:</span> in a multi-premise chain, the argument is only as strong as its least defensible premise — locate the one premise that, if false, breaks the entire conclusion, and that's where a challenge should be aimed, not at premises that are already secure.
+          </div>
+        </div>
+      </div>
+      <div class="inner-section" id="t13-ex">
+        <div class="inner-header" onclick="togI('t13-ex')">
+          <span class="inner-label">Worked Example</span>
+          <svg class="inner-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="inner-body">
+          <div class="example-block">
+            <div class="ex-label">Full Four-Step Analysis</div>
+            <p>"Every licensed pharmacist must complete continuing education. Person D has not completed continuing education this year. Continuing education requirements only apply to active licence holders. Therefore Person D's licence must be inactive."</p>
+            <p><strong>Step 1 — conclusion:</strong> Person D's licence is inactive.</p>
+            <p><strong>Step 2 — premises:</strong> P1: ∀x, active(x) → must_CE(x). P2: ¬CE(D). P3 (restates P1's scope): CE requirement applies only to active licence holders.</p>
+            <p><strong>Step 3 — form:</strong> P1 + P2 looks like it should give Modus Tollens (¬must_CE(D) → ¬active(D))but P2 actually says ¬CE(D), not ¬must_CE(D) — not completing CE is not the same as not being required to.</p>
+            <p><strong>Step 4 — validity:</strong> <strong>Invalid as stated.</strong> The argument conflates "did not complete CE" with "was not required to complete CE." A licensed, active pharmacist who simply failed to comply with the requirement is indistinguishable, on this evidence alone, from one whose licence was never active in the first place. The conclusion needs an additional premise — evidence that Person D's non-compliance was due to inapplicability of the rule, not violation of it — which the argument as given does not supply.</p>
           </div>
         </div>
       </div>
