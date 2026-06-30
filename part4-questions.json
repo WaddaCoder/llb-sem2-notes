@@ -1,0 +1,86 @@
+{
+  "topics": [
+    {
+      "topic": "bivariate-scatter",
+      "bareQuestions": [
+        {
+          "id": "bb-e1",
+          "difficulty": "easy",
+          "q": "A scatter plot shows that as X increases, Y also tends to increase. What is this called?",
+          "a": "Positive association (positive correlation) between X and Y."
+        },
+        {
+          "id": "bb-e2",
+          "difficulty": "easy",
+          "q": "In a dataset of 30 points, one point lies far away from the general pattern formed by the rest. What is this point called?",
+          "a": "An outlier."
+        },
+        {
+          "id": "bb-m1",
+          "difficulty": "medium",
+          "q": "Dataset: X = 5, 10, 15, 20, 25 and Y = 40, 35, 30, 24, 20. Describe the direction and form of the relationship.",
+          "a": "Direction: negative — Y consistently falls as X rises. Form: roughly linear, since the decrease per step (5, 5, 6, 4) is close to constant rather than accelerating or curving."
+        },
+        {
+          "id": "bb-m2",
+          "difficulty": "medium",
+          "q": "Two variables, ice-cream sales and sunburn cases, show a strong positive correlation across a year of monthly data. Name the lurking variable most likely responsible, and explain why it produces this pattern.",
+          "a": "Ambient temperature / season. Hot months independently increase both ice-cream purchases and sun exposure (hence sunburn), producing a strong association between the two even though neither causes the other."
+        },
+        {
+          "id": "bb-h1",
+          "difficulty": "hard",
+          "q": "A dataset of 20 points shows a weak positive association (loosely scattered cloud, slight upward drift). One additional extreme outlier is added, far above the rest of the Y values at a middling X value. Explain, conceptually, what this is likely to do to the apparent strength of the correlation, and why scatter plots should always be inspected visually rather than relying on a correlation number alone.",
+          "a": "A single extreme outlier can substantially distort the correlation coefficient in either direction — here, since the outlier sits at a middling X but extreme Y, it tends to weaken or even reverse the impression of a clean linear trend, pulling the line and the r-value away from what the other 20 points actually show. This is exactly why a correlation coefficient computed from raw numbers, without first looking at the scatter plot, can be seriously misleading — a single point can dominate the statistic while being visually obvious as an anomaly on the plot."
+        },
+        {
+          "id": "bb-h2",
+          "difficulty": "hard",
+          "q": "Explain, in your own words, why 'no visible linear trend on a scatter plot' does not necessarily mean 'no relationship at all' between two variables.",
+          "a": "Pearson-type and visual-linear assessment only detect linear (straight-line) relationships. Two variables can have a strong, even perfectly predictable, non-linear relationship — for example, a U-shaped or curved pattern — that produces a near-zero linear correlation and an apparently random-looking scatter, while in fact Y is fully determined by X through a non-linear rule. 'No linear trend' should be read narrowly as 'no straight-line relationship detected,' not as 'X and Y are unrelated.'"
+        }
+      ]
+    },
+    {
+      "topic": "correlation-regression",
+      "bareQuestions": [
+        {
+          "id": "cr-e1",
+          "difficulty": "easy",
+          "q": "Given X = 2, 4, 6, 8 and Y = 5, 9, 11, 15, compute Σx, Σy, x̄, and ȳ.",
+          "a": "Σx = 20, Σy = 40, x̄ = 5, ȳ = 10."
+        },
+        {
+          "id": "cr-e2",
+          "difficulty": "easy",
+          "q": "A study reports r = -0.92 between two variables. State the direction and strength in plain words.",
+          "a": "Strong negative linear relationship — as one variable increases, the other decreases, and the points lie close to a single descending line."
+        },
+        {
+          "id": "cr-m1",
+          "difficulty": "medium",
+          "q": "Compute Pearson's r for: X = 1, 2, 3, 4, 5 and Y = 20, 16, 13, 9, 7.",
+          "a": "n = 5, Σx = 15, Σy = 65, Σxy = 162, Σx² = 55, Σy² = 955.<br>r = [5(162) − (15)(65)] / √([5(55) − 15²][5(955) − 65²]) = -195 / √(50 × 550) ≈ <strong>-0.995</strong> — an almost perfect negative linear relationship."
+        },
+        {
+          "id": "cr-m2",
+          "difficulty": "medium",
+          "q": "A regression line is given as ŷ = 25 + 3x. Predict ŷ when x = 12, and state what the slope (3) means in plain language.",
+          "a": "ŷ = 25 + 3(12) = 25 + 36 = 61.<br>The slope of 3 means: for every one-unit increase in x, the predicted value of y increases by 3 units, on average, within the range the model was fitted on."
+        },
+        {
+          "id": "cr-h1",
+          "difficulty": "hard",
+          "q": "Given X (room temperature, °C) = 20, 22, 24, 26, 28, 30 and Y (ice-cream units sold) = 50, 58, 62, 70, 75, 85, compute the full regression equation ŷ = b₀ + b₁x.",
+          "a": "n = 6, Σx = 150, Σy = 400, Σxy = 10234, Σx² = 3820.<br>b₁ = [6(10234) − (150)(400)] / [6(3820) − 150²] = 1404 / 420 ≈ <strong>3.3429</strong><br>x̄ = 25, ȳ = 66.667<br>b₀ = 66.667 − (3.3429)(25) ≈ <strong>-16.905</strong><br>Regression equation: <span style=\"font-family:'JetBrains Mono',monospace\">ŷ = -16.905 + 3.3429x</span>"
+        },
+        {
+          "id": "cr-h2",
+          "difficulty": "hard",
+          "q": "Using the regression from the previous question (ŷ = -16.905 + 3.3429x, fitted on X ranging 20–30°C), a student predicts ice-cream sales at 5°C. Compute the prediction, and explain why this number should not be trusted even though it is mathematically correct.",
+          "a": "ŷ = -16.905 + 3.3429(5) ≈ -0.19, i.e. a negative predicted number of units sold — which is impossible in reality (you cannot sell a negative quantity).<br>This is a textbook extrapolation failure: 5°C lies far outside the fitted range (20–30°C), and the linear model has no basis for assuming the same relationship holds there. The nonsensical negative result is itself the proof that extrapolating this far beyond the observed data range produces unreliable, sometimes physically impossible, predictions."
+        }
+      ]
+    }
+  ]
+}

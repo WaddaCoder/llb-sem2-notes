@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR-II · Study Navigator</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#0E0E1A;--ink-soft:#3A3A4A;--ink-faint:#6B6B7B;--page:#F9F8F5;--rule:#E2DDD6;
+    --bar-border:#C9A84C;--bar-bg:#F0EDE6;
+    --qr:   #1AADAD;
+    /* QR cluster colours */
+    --c1:#3A7FD4;--c2:#2EAD6E;--c3:#E05A28;--c4:#1AADAD;--c5:#8A4FD4;--c6:#D4941A;--c7:#D4316A;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;color:var(--ink);background:var(--page);padding-bottom:80px;}
+
+  /* ── HEADER ── */
+  .site-header{background:var(--ink);padding:32px 20px 24px;}
+  .site-header .eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--bar-border);margin-bottom:6px;}
+  .site-header h1{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#F9F8F5;line-height:1.2;}
+  .site-header .meta{font-size:13px;color:#A0A8B0;margin-top:6px;}
+
+  /* ── CONTAINER ── */
+  .container{max-width:680px;margin:0 auto;padding:0 16px;}
+
+  /* ── SUBJECT BLOCK ── */
+  .subject-block{margin-top:32px;}
+
+  /* ── PART CARDS ── */
+  .parts-grid{margin-top:10px;display:flex;flex-direction:column;gap:8px;}
+
+  .part-card{border:1px solid var(--rule);border-left:4px solid transparent;background:#fff;border-radius:2px;text-decoration:none;display:block;transition:background 0.15s;}
+  .part-card:hover{background:#FAFAF8;}
+  .part-card.live{cursor:pointer;}
+  .part-card.soon{opacity:0.55;cursor:default;pointer-events:none;}
+
+  .part-card-inner{display:flex;align-items:center;gap:12px;padding:13px 16px;}
+  .part-icon{width:32px;height:32px;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .part-icon svg{width:16px;height:16px;}
+
+  .part-info{flex:1;min-width:0;}
+  .part-title{font-size:14px;font-weight:600;color:var(--ink);line-height:1.3;}
+  .part-subtitle{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-faint);margin-top:2px;letter-spacing:0.04em;}
+
+  .part-badge{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:0.1em;padding:3px 7px;border-radius:1px;flex-shrink:0;}
+  .badge-live{background:var(--ink);color:#F9F8F5;}
+  .badge-mid{background:#1A5C3A;color:#fff;}
+  .badge-soon{background:var(--rule);color:var(--ink-faint);}
+  .badge-final{background:#5C1A1A;color:#fff;}
+
+  /* ── CLUSTER LABELS inside QR ── */
+  .cluster-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-faint);padding:14px 0 4px;}
+
+  /* ── PROGRESS BAR ── */
+  .progress-row{display:flex;align-items:center;gap:10px;margin-top:8px;}
+  .prog-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-faint);white-space:nowrap;}
+  .prog-outer{flex:1;height:3px;background:var(--rule);border-radius:2px;}
+  .prog-inner{height:3px;border-radius:2px;}
+  .prog-count{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-faint);white-space:nowrap;}
+
+  /* ── FOOTER ── */
+  .site-footer{margin-top:56px;padding:20px;border-top:1px solid var(--rule);text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-faint);letter-spacing:0.08em;line-height:1.8;}
+
+  @media(max-width:420px){
+    .site-header h1{font-size:20px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="eyebrow">Asian Institute of Law · University of the Punjab Affiliate</div>
+  <h1>LLB Semester II · Study Navigator</h1>
+  <div class="meta">GQR-201 · Dr. Tariq Ismaeel</div>
+</header>
+
+<div class="container">
+
+  <div class="subject-block">
+
+    <div class="progress-row">
+      <span class="prog-label">Mid-term scope</span>
+      <div class="prog-outer"><div class="prog-inner" style="width:55%;background:var(--qr)"></div></div>
+      <span class="prog-count">Lec. 10 / 18</span>
+    </div>
+
+    <!-- MID-TERM SCOPE (note: per official AIL coverage plan, mid-term = Lec 1-18 only;
+         per the instructor's actual mid-term topics list and model paper, bivariate/scatter/
+         correlation/regression are also examinable at mid-term, hence Part 4 sits here too
+         even though those lectures are numbered post-18 in the official plan) -->
+    <div class="cluster-label">Mid-term Scope</div>
+    <div class="parts-grid">
+
+      <a class="part-card live" href="qr2-part1-logic-foundations.html" style="border-left-color:var(--c1)">
+        <div class="part-card-inner">
+          <div class="part-icon" style="background:#EEF4FC;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3A7FD4" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/></svg>
+          </div>
+          <div class="part-info">
+            <div class="part-title">Part 1 — Logic Foundations</div>
+            <div class="part-subtitle">Lec. 1–10 · 13 topics · Propositions · Quantifiers · Fallacies · Venn</div>
+          </div>
+          <span class="part-badge badge-mid">MID-TERM</span>
+        </div>
+      </a>
+
+      <a class="part-card live" href="qr2-part2-logic-in-action.html" style="border-left-color:var(--c3)">
+        <div class="part-card-inner">
+          <div class="part-icon" style="background:#FEF2EC;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#E05A28" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="part-info">
+            <div class="part-title">Part 2 — Logic in Action</div>
+            <div class="part-subtitle">Lec. 8–10 extension · 6 legal scenarios · Applied reasoning</div>
+          </div>
+          <span class="part-badge badge-mid">MID-TERM</span>
+        </div>
+      </a>
+
+      <a class="part-card live" href="qr2-part3-mathematical-modeling.html" style="border-left-color:var(--c4)">
+        <div class="part-card-inner">
+          <div class="part-icon" style="background:#E8F8F8;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1AADAD" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="part-info">
+            <div class="part-title">Part 3 — Mathematical Modeling</div>
+            <div class="part-subtitle">Lec. 11–18 · 10 topics · Linear · Systems · Exponential · Derivatives</div>
+          </div>
+          <span class="part-badge badge-mid">MID-TERM</span>
+        </div>
+      </a>
+
+      <a class="part-card live" href="qr2-part4-bivariate-regression.html" style="border-left-color:#D4316A">
+        <div class="part-card-inner">
+          <div class="part-icon" style="background:#FBE7EE;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4316A" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="part-info">
+            <div class="part-title">Part 4 — Bivariate Analysis &amp; Regression</div>
+            <div class="part-subtitle">Scatter plots · Pearson correlation · Simple linear regression</div>
+          </div>
+          <span class="part-badge badge-mid">MID-TERM</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- POST-MIDTERM -->
+    <div class="cluster-label" style="margin-top:8px;">Post-Midterm · Remaining Lec. 19–30</div>
+    <div class="parts-grid">
+
+      <div class="part-card soon" style="border-left-color:var(--c6)">
+        <div class="part-card-inner">
+          <div class="part-icon" style="background:#FDF3E3;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4941A" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <div class="part-info">
+            <div class="part-title">Part 5 — Statistical Inference</div>
+            <div class="part-subtitle">Lec. 25–30 · Estimation · Confidence intervals · Hypothesis testing · Chi-square</div>
+          </div>
+          <span class="part-badge badge-soon">COMING</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  Quantitative Reasoning II · Asian Institute of Law · LLB Sem II 2026<br>
+  waddacoder.github.io/llb-sem2-notes
+</footer>
+
+</body>
+</html>
