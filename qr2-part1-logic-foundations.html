@@ -489,6 +489,62 @@
               <div class="what-tests">Biconditional applied to three cases · necessary vs. sufficient conditions · the legal significance of "if and only if" in statutory language · Tier 3 because it requires evaluating three scenarios and explaining the structural difference between → and ↔</div>
             </div>
           </div>
+
+          <div class="question-block" id="q03d">
+            <div class="q-header" onclick="togQ('q03d')"><span class="tier-badge t2-badge">T2 · C</span><span class="q-text">Build a truth table for (p ∨ q) → r. Identify all rows where the compound statement is false. Then interpret: p = "the accused was present at the scene," q = "the accused's fingerprints were found," r = "the accused is charged." Under what combination of facts does the charging decision violate this logical rule?</span><svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="q-body">
+              <p>The compound statement (p∨q)→r is false only when the antecedent (p∨q) is true and the consequent r is false.</p>
+              <table class="logic-table"><thead><tr><th>p</th><th>q</th><th>r</th><th>p∨q</th><th>(p∨q)→r</th></tr></thead><tbody>
+              <tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr>
+              <tr><td>T</td><td>T</td><td>F</td><td>T</td><td><strong>F</strong></td></tr>
+              <tr><td>T</td><td>F</td><td>T</td><td>T</td><td>T</td></tr>
+              <tr><td>T</td><td>F</td><td>F</td><td>T</td><td><strong>F</strong></td></tr>
+              <tr><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td></tr>
+              <tr><td>F</td><td>T</td><td>F</td><td>T</td><td><strong>F</strong></td></tr>
+              <tr><td>F</td><td>F</td><td>T</td><td>F</td><td>T</td></tr>
+              <tr><td>F</td><td>F</td><td>F</td><td>F</td><td>T</td></tr>
+              </tbody></table>
+              <p><strong>False rows:</strong> rows 2, 4, and 6 — all cases where p∨q=T (at least one piece of evidence exists) but r=F (no charge). The last row (p=F, q=F, r=F) is vacuously true — when there's no evidence at all, the rule doesn't require charging, so no violation.</p>
+              <p><strong>Legal interpretation:</strong> the charging rule is violated whenever the accused was present OR fingerprints were found, but charges were not filed. The rule does NOT require charging when neither evidence type exists (row 8 — vacuously compliant), and it does NOT prohibit charging when evidence exists (rows 1, 3, 5 — rule satisfied). A discretionary decision not to charge despite evidence (rows 2, 4, 6) is where the violation occurs under this logical rule.</p>
+              <div class="what-tests">Full 8-row truth table for a 3-variable compound · identifying false rows · vacuous truth when antecedent is false · legal interpretation of which scenarios violate the rule</div>
+            </div>
+          </div>
+
+          <div class="question-block" id="q03e">
+            <div class="q-header" onclick="togQ('q03e')"><span class="tier-badge t2-badge">T2 · D</span><span class="q-text">Determine whether p ↔ q is logically equivalent to (p→q) ∧ (q→p) by constructing the truth tables for both and comparing their final columns.</span><svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="q-body">
+              <table class="logic-table"><thead><tr><th>p</th><th>q</th><th>p→q</th><th>q→p</th><th>(p→q)∧(q→p)</th><th>p↔q</th></tr></thead><tbody>
+              <tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr>
+              <tr><td>T</td><td>F</td><td>F</td><td>T</td><td>F</td><td>F</td></tr>
+              <tr><td>F</td><td>T</td><td>T</td><td>F</td><td>F</td><td>F</td></tr>
+              <tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td></tr>
+              </tbody></table>
+              <p>The final two columns are identical in every row — T, F, F, T. <strong>Logically equivalent.</strong> p↔q means exactly the same as (p→q)∧(q→p): the biconditional holds precisely when both one-way conditionals hold simultaneously. This equivalence is useful in legal drafting: "A if and only if B" can always be unpacked as "if A then B, AND if B then A" — two separate obligations that together constitute the biconditional.</p>
+              <div class="what-tests">Logical equivalence via column comparison · biconditional as conjunction of two conditionals · practical drafting implication of the equivalence</div>
+            </div>
+          </div>
+
+          <div class="question-block" id="q03f">
+            <div class="q-header" onclick="togQ('q03f')"><span class="tier-badge t3-badge">T3 · B</span><span class="q-text">A three-condition liability rule states: "A person is liable if and only if they had a duty of care (d), they breached that duty (b), and the breach caused harm (c)." (a) Formalise as a biconditional with compound antecedent and build the truth table for all 8 combinations of d, b, c and the liability outcome L. (b) Identify all rows where L=T. (c) A claimant argues "I was harmed (c=T) and there was a breach (b=T), so the defendant is liable." Evaluate this argument using the truth table. (d) Explain why courts require all three elements rather than any two.</span><svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="q-body">
+              <p><strong>(a)</strong> L ↔ (d ∧ b ∧ c). Since L↔X is true when L and X have the same value, L=T only when d∧b∧c=T (all three true), and L=F otherwise.</p>
+              <table class="logic-table"><thead><tr><th>d</th><th>b</th><th>c</th><th>d∧b∧c</th><th>L</th></tr></thead><tbody>
+              <tr><td>T</td><td>T</td><td>T</td><td>T</td><td><strong>T</strong></td></tr>
+              <tr><td>T</td><td>T</td><td>F</td><td>F</td><td>F</td></tr>
+              <tr><td>T</td><td>F</td><td>T</td><td>F</td><td>F</td></tr>
+              <tr><td>T</td><td>F</td><td>F</td><td>F</td><td>F</td></tr>
+              <tr><td>F</td><td>T</td><td>T</td><td>F</td><td>F</td></tr>
+              <tr><td>F</td><td>T</td><td>F</td><td>F</td><td>F</td></tr>
+              <tr><td>F</td><td>F</td><td>T</td><td>F</td><td>F</td></tr>
+              <tr><td>F</td><td>F</td><td>F</td><td>F</td><td>F</td></tr>
+              </tbody></table>
+              <p><strong>(b) L=T in row 1 only</strong> — when d=T, b=T, and c=T simultaneously.</p>
+              <p><strong>(c) Claimant's argument:</strong> b=T and c=T, but d is unspecified. Rows 1 and 5 have b=T, c=T. In row 1 (d=T): L=T. In row 5 (d=F): L=F. The claimant's argument is incomplete — two elements are not sufficient to determine L=T. Without establishing d=T (duty of care), the argument fails for row 5. The truth table reveals the claimant has not made a valid inference.</p>
+              <p><strong>(d) Why all three elements:</strong> each element independently captures a distinct legal requirement. Duty without breach means no fault occurred. Breach without duty means there was no legal standard violated. Harm without breach means the harm was not the defendant's fault. Harm without duty means the defendant owed nothing to begin with. Any two elements together still leave the third's absence as a complete defence — the conjunction structure means removing any one element exits the single L=T row entirely, landing in one of seven L=F rows.</p>
+              <div class="what-tests">Three-variable truth table for biconditional · single-row L=T · evaluating an incomplete argument against the table · why conjunction requires all elements · negligence as a truth-table structure</div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="inner-section" id="t03-bar">
@@ -614,6 +670,53 @@
               <div class="what-tests">Fallacy of Denying the Antecedent · sufficient vs. necessary conditions · the inverse is not equivalent to the original · statutory interpretation as logical structure · highest difficulty — requires identifying the fallacy, naming it, explaining why it fails, and identifying what argument would have worked</div>
             </div>
           </div>
+
+          <div class="question-block" id="q04c">
+            <div class="q-header" onclick="togQ('q04c')"><span class="tier-badge t2-badge">T2 · B</span><span class="q-text">State the contrapositive of each statement and verify it is logically equivalent: (i) "If a company is insolvent, it cannot pay dividends." (ii) "If a witness recants, the prosecution's case weakens." (iii) "If the notice was served, the defendant had knowledge of the proceedings."</span><svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="q-body">
+              <p>(i) Original: I → ¬D (insolvent → cannot pay dividends). Contrapositive: D → ¬I (can pay dividends → not insolvent). Equivalent — if a company is paying dividends, it cannot be insolvent.</p>
+              <p>(ii) Original: R → W (recants → prosecution weakens). Contrapositive: ¬W → ¬R (prosecution does not weaken → witness did not recant). Equivalent — if the case stayed strong, the witness must not have recanted.</p>
+              <p>(iii) Original: S → K (served → had knowledge). Contrapositive: ¬K → ¬S (no knowledge → not served). Equivalent — if the defendant had no knowledge of the proceedings, service cannot have occurred. This is exactly the structure of a service challenge in civil procedure.</p>
+              <div class="what-tests">Contrapositive formation for three different conditionals · verifying logical equivalence · legal applications of contrapositive reasoning</div>
+            </div>
+          </div>
+
+          <div class="question-block" id="q04d">
+            <div class="q-header" onclick="togQ('q04d')"><span class="tier-badge t2-badge">T2 · C</span><span class="q-text">A student claims: "If the evidence was illegally obtained, it is inadmissible. The evidence was found to be admissible. Therefore it was not illegally obtained." Identify the argument form, determine if it is valid, and explain the reasoning in terms of the contrapositive.</span><svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="q-body">
+              <p>P1: I → ¬A (illegally obtained → inadmissible, equivalently: illegal → ¬admissible)</p>
+              <p>P2: A (the evidence was admissible)</p>
+              <p>∴ C: ¬I (it was not illegally obtained)</p>
+              <p><strong>Argument form:</strong> Modus Tollens applied via contrapositive. P1's contrapositive: A → ¬I (admissible → not illegal). P2 gives A=T. By modus ponens on the contrapositive: ¬I=T. <strong>Valid.</strong></p>
+              <p>Equivalently, from P1 (I→¬A) and P2 (A=T): if I were true, ¬A would be true, contradicting P2. So I must be false. Same conclusion, valid by modus tollens directly on P1 with ¬(¬A) = A as the premise.</p>
+              <div class="what-tests">Modus tollens · using contrapositive to verify validity · two equivalent reasoning paths to the same conclusion · admissibility as a logical structure</div>
+            </div>
+          </div>
+
+          <div class="question-block" id="q04e">
+            <div class="q-header" onclick="togQ('q04e')"><span class="tier-badge t2-badge">T2 · D</span><span class="q-text">Explain the difference between the converse and the contrapositive of p→q. For the statement "If a contract is void, it has no legal effect," write both the converse and the contrapositive. Which, if either, must be true given the original? Which is the most dangerous mistake to make in legal practice?</span><svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="q-body">
+              <p><strong>Contrapositive of p→q:</strong> ¬q→¬p. Logically equivalent to the original — if the original is true, the contrapositive is necessarily true. No additional information needed.</p>
+              <p><strong>Converse of p→q:</strong> q→p. Logically independent of the original — the original can be true while the converse is false, and vice versa. They make different claims.</p>
+              <p>Original: V→¬L (void → no legal effect).</p>
+              <p><strong>Contrapositive:</strong> L→¬V (has legal effect → not void). Must be true. If a contract has legal effect, it cannot be void.</p>
+              <p><strong>Converse:</strong> ¬L→V (no legal effect → void). Does NOT have to be true. A contract might have no legal effect for reasons other than voidness — it might be unenforceable, or its performance might be complete, or it might be voidable but not yet avoided. "No effect" does not automatically mean "void."</p>
+              <p><strong>Most dangerous mistake:</strong> treating the converse as if it were the contrapositive — assuming "the contract has no legal effect, therefore it must be void" when in fact voidness is only one of several reasons a contract might lack legal effect. In practice, this error can cause lawyers to advise clients incorrectly about whether a contract needs to be formally voided rather than simply treated as unenforceable.</p>
+              <div class="what-tests">Contrapositive vs converse distinction · equivalence of contrapositive · independence of converse · practical consequence of converse error in contract law</div>
+            </div>
+          </div>
+
+          <div class="question-block" id="q04f">
+            <div class="q-header" onclick="togQ('q04f')"><span class="tier-badge t3-badge">T3 · B</span><span class="q-text">A tax rule: "If a person has foreign income above Rs. 1,000,000 AND maintains a foreign account, they must file a foreign asset declaration." (a) Formalise as (p∧q)→r. (b) Which of the four named patterns are valid? (c) Taxpayer X has high income but no account — authority issues a notice. Evaluate. (d) Taxpayer Y has an account but low income. Same question.</span><svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="q-body">
+              <p><strong>(a)</strong> p="income &gt; Rs.1,000,000," q="has foreign account," r="must file declaration." Rule: (p∧q)→r.</p>
+              <p><strong>(b)</strong> Modus Ponens: (p∧q)=T ∴ r=T. Valid. Modus Tollens: ¬r ∴ ¬(p∧q). Valid. Affirming Consequent: r ∴ (p∧q). Invalid. Denying Antecedent: ¬(p∧q) ∴ ¬r. Invalid — filing might still be required under a different rule.</p>
+              <p><strong>(c) Taxpayer X:</strong> p=T, q=F → p∧q=F → antecedent false → rule does not require X to file. The authority's notice is not supported by this rule. X should challenge by demonstrating q=F.</p>
+              <p><strong>(d) Taxpayer Y:</strong> p=F, q=T → p∧q=F → same. The conjunction requires both simultaneously. Y is not subject to the filing obligation under this rule.</p>
+              <div class="what-tests">Compound antecedent · all four patterns evaluated · vacuously true when one conjunct fails · two taxpayers demonstrating the same logical gap from different directions</div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="inner-section" id="t04-bar">
@@ -1536,6 +1639,46 @@
               <div class="what-tests">Hypothetical syllogism · modus ponens chain · what happens when an intermediate link breaks · appellate reasoning as logical chain repair</div>
             </div>
           </div>
+
+          <div class="question-block" id="q11d">
+            <div class="q-header" onclick="togQ('q11d')"><span class="tier-badge t2-badge">T2 · C</span><span class="q-text">Use a truth table to test validity: P1: p→q, P2: q→r, P3: p. Conclusion: r. Identify all rows where all three premises are true, and check whether r holds in every such row.</span><svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="q-body">
+              <table class="logic-table"><thead><tr><th>p</th><th>q</th><th>r</th><th>p→q</th><th>q→r</th><th>All P true?</th><th>r</th></tr></thead><tbody>
+              <tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td><strong>YES</strong></td><td>T ✓</td></tr>
+              <tr><td>T</td><td>T</td><td>F</td><td>T</td><td>F</td><td>No (P2 false)</td><td>—</td></tr>
+              <tr><td>T</td><td>F</td><td>T</td><td>F</td><td>T</td><td>No (P1 false)</td><td>—</td></tr>
+              <tr><td>T</td><td>F</td><td>F</td><td>F</td><td>T</td><td>No (P1 false)</td><td>—</td></tr>
+              <tr><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td><td>No (P3 false)</td><td>—</td></tr>
+              <tr><td>F</td><td>T</td><td>F</td><td>T</td><td>F</td><td>No</td><td>—</td></tr>
+              <tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td>No (P3 false)</td><td>—</td></tr>
+              <tr><td>F</td><td>F</td><td>F</td><td>T</td><td>T</td><td>No (P3 false)</td><td>—</td></tr>
+              </tbody></table>
+              <p>Only row 1 has all three premises true. In that row, r=T. <strong>Valid.</strong> This is the named pattern "Hypothetical Syllogism + Modus Ponens" — the truth table confirms what the named pattern already tells us, but the table method works for any argument, named or not.</p>
+              <div class="what-tests">Full 8-row validity test · identifying all-premises-true rows · confirming the named pattern by table · the table method as fallback for unnamed patterns</div>
+            </div>
+          </div>
+
+          <div class="question-block" id="q11e">
+            <div class="q-header" onclick="togQ('q11e')"><span class="tier-badge t2-badge">T2 · D</span><span class="q-text">Identify the named fallacy and explain why the argument is invalid: "If the agreement was signed under duress, it is voidable. This agreement is voidable. Therefore it was signed under duress." What does this argument incorrectly assume about the relationship between the premises?</span><svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="q-body">
+              <p>Pattern: p→q, q ∴ p. <strong>Affirming the Consequent — Invalid.</strong></p>
+              <p>The fallacy: the argument correctly states p→q (duress → voidable) and correctly observes q (the agreement is voidable). But it concludes p (duress) from these two premises — which is the converse of the given conditional, not the conditional itself. Voidability has multiple causes: misrepresentation, undue influence, incapacity, mistake. The fact that the agreement is voidable tells us it might have been signed under duress, but it is consistent with many other explanations.</p>
+              <p>What the argument incorrectly assumes: that duress is the only way an agreement becomes voidable — i.e., that q→p holds. This would require a biconditional (duress ↔ voidable), not just a one-way conditional. Without that, observing q leaves the cause of voidability entirely open.</p>
+              <div class="what-tests">Affirming the Consequent · the converse confusion · why voidability from q doesn't establish the specific cause p · the biconditional requirement to make the inference valid</div>
+            </div>
+          </div>
+
+          <div class="question-block" id="q11f">
+            <div class="q-header" onclick="togQ('q11f')"><span class="tier-badge t3-badge">T3 · B</span><span class="q-text">Evaluate the validity of this argument using a truth table AND by identifying the named pattern: P1: "If the defendant had access to the system and had a financial motive, then they are a suspect." P2: "The defendant is not a suspect." P3: "The defendant had a financial motive." Conclusion: "The defendant did not have access to the system." (a) Formalise. (b) Run the validity test. (c) Identify the named pattern. (d) A prosecutor argues P3 (motive) is sufficient alone to establish suspicion. Evaluate this claim against P1's structure.</span><svg class="q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+            <div class="q-body">
+              <p><strong>(a)</strong> A="had access," M="had financial motive," S="is a suspect." P1: (A∧M)→S. P2: ¬S. P3: M. Conclusion: ¬A.</p>
+              <p><strong>(b) Validity test:</strong> from P1 and P2 by modus tollens: ¬S → ¬(A∧M) = ¬A∨¬M. So either the defendant lacked access OR lacked motive (or both). From P3: M=T. Since ¬A∨¬M must hold and ¬M is false (M=T), we need ¬A=T. Therefore ¬A follows. <strong>Valid.</strong></p>
+              <p><strong>(c) Named pattern:</strong> Modus Tollens on the compound antecedent, combined with De Morgan's law and elimination of ¬M via P3. This is a two-step chain — not a single named pattern applied once, but a valid multi-step derivation.</p>
+              <p><strong>(d) Prosecutor's claim — "motive alone establishes suspicion":</strong> P1 is (A∧M)→S. This requires both access AND motive. Motive alone (M=T, A unknown) leaves the antecedent A∧M with an unresolved A component. If A=F, then A∧M=F → S is not established. The prosecutor's claim treats M as sufficient, but P1 makes it only necessary-in-conjunction — M is required but not sufficient on its own. This is exactly the "conjunction as sufficient" fallacy applied to P1's antecedent. P1 would need to read M→S (motive alone triggers suspicion) for the prosecutor's claim to be valid, which is a different and weaker trigger than the original rule.</p>
+              <div class="what-tests">Compound antecedent modus tollens · De Morgan on ¬(A∧M) · multi-step derivation · prosecutorial misreading of conjunction as sufficient-condition claim</div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="inner-section" id="t11-bar">
