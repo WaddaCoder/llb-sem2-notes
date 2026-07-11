@@ -108,7 +108,19 @@
     .logic-table { font-size: 14px; }
     .nav-strip { padding: 14px 32px; }
   }
+  .font-bar{background:#1A1A2A;border-top:1px solid #2A2A3A;padding:10px 20px;display:flex;align-items:center;justify-content:center;gap:12px;}
+  .font-bar-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#7A8090;white-space:nowrap;}
+  .font-presets{display:flex;gap:6px;}
+  .fp-btn{font-family:'JetBrains Mono',monospace;font-weight:600;border:1px solid #3A3A4A;background:none;color:#A0A8B0;border-radius:2px;cursor:pointer;line-height:1;padding:7px 12px;transition:background 0.15s,color 0.15s;}
+  .fp-btn:hover{background:#2A2A3A;color:#F9F8F5;}
+  .fp-btn.active{background:var(--bar-border);color:#1A1A2A;border-color:var(--bar-border);}
+  .fp-btn:nth-child(1){font-size:11px;}
+  .fp-btn:nth-child(2){font-size:13px;}
+  .fp-btn:nth-child(3){font-size:15px;}
+  .fp-btn:nth-child(4){font-size:17px;}
+  .fp-btn:nth-child(5){font-size:19px;}
 </style>
+<style id="fs-override"></style>
 </head>
 <body>
 
@@ -642,6 +654,16 @@
   <a class="nav-link" href="qr2-index.html">⌂ Home</a>
   <a class="nav-link" href="qr2-part1-logic-foundations.html">Part 1 →</a>
 </div>
+<div class="font-bar">
+  <span class="font-bar-label">Text size</span>
+  <div class="font-presets">
+    <button class="fp-btn" onclick="setFont(14)" data-size="14">A</button>
+    <button class="fp-btn" onclick="setFont(16)" data-size="16">A</button>
+    <button class="fp-btn" onclick="setFont(18)" data-size="18">A</button>
+    <button class="fp-btn" onclick="setFont(21)" data-size="21">A</button>
+    <button class="fp-btn" onclick="setFont(24)" data-size="24">A</button>
+  </div>
+</div>
 
 <footer class="site-footer">
   QR-II · Quantifiers &amp; Negation — Deep Treatment · Asian Institute of Law · LLB Sem II 2026
@@ -653,6 +675,25 @@
   function togQ(id){document.getElementById(id).classList.toggle('open');}
   function expandAll(){document.querySelectorAll('.topic-card,.inner-section,.question-block').forEach(e=>e.classList.add('open'));}
   function collapseAll(){document.querySelectorAll('.topic-card,.inner-section,.question-block').forEach(e=>e.classList.remove('open'));}
+  function setFont(size) {
+    var s = size / 16;
+    document.getElementById('fs-override').textContent = [
+      'body{font-size:'+size+'px !important;}',
+      'p{font-size:'+Math.round(15*s)+'px !important;}',
+      '.site-header h1{font-size:'+Math.round(22*s)+'px !important;}',
+      '.topic-title{font-size:'+Math.round(17*s)+'px !important;}',
+      '.inner-label{font-size:'+Math.round(11*s)+'px !important;}',
+      '.notation{font-size:'+Math.round(13*s)+'px !important;}',
+      '.example-block p,.pattern-warn p,.bar-lens p{font-size:'+Math.round(14*s)+'px !important;}',
+      '.q-text{font-size:'+Math.round(14*s)+'px !important;}',
+      '.q-body p{font-size:'+Math.round(14*s)+'px !important;}',
+      '.what-tests{font-size:'+Math.round(11*s)+'px !important;}',
+    ].join('');
+    document.querySelectorAll('.fp-btn').forEach(function(b){
+      b.classList.toggle('active', parseInt(b.dataset.size) === size);
+    });
+  }
+  setFont(16);
 </script>
 </body>
 </html>
